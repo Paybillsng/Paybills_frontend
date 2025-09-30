@@ -1,0 +1,114 @@
+I want to build **only the frontend** of a web application called **Paybills.ng**. It's a **responsive, highly secure, PWD-enabled fintech platform** that allows users in Nigeria to perform multiple utility and digital service transactions in one place. Use **React.js with Tailwind CSS**, prioritize **accessibility (ARIA standards)**, **semantic HTML**, and **mobile-first responsive design**.
+
+### 🔧 Technical Specs:
+- Frontend Only: No backend required, simulate API calls with dummy/mock data where needed.
+- Framework: React.js (latest), Tailwind CSS for styling, React Router for navigation.
+- State Management: Use React Context or Redux Toolkit if needed.
+- Form Handling: React Hook Form with Yup for validation.
+- PWD Support: Full accessibility with ARIA roles, keyboard navigation, color contrast compliance (WCAG 2.1 AA).
+- Security (Frontend): Use 2FA UI prompts, input sanitization, and clearly indicate secure fields.
+- Responsiveness: Mobile-first layout using Tailwind utilities. Must look great on phones, tablets, and desktops.
+- Dark Mode toggle.
+
+---
+
+### 🧑‍💼 Target Users
+- Zainab (tech-savvy freelancer),
+- Mr. Adebayo (SME owner),
+- Chidi (student/agent user).
+
+---
+
+### 🎯 Pages to Build:
+
+#### 1. **Authentication**
+- `/login`: Email & password login form + secure login prompt.
+- `/register`: Signup form with basic info and password requirements.
+- `/verify-phone`: OTP entry screen.
+- `/2fa`: 2FA code input (design only).
+- `/forgot-password`: Password reset screen.
+
+#### 2. **User Dashboard**
+- `/dashboard`: Personalized greeting, wallet balance, recent transactions, pie/bar chart of spending by category.
+- `/profile`: View and edit personal info, upload photo, view KYC status with color-coded badge.
+- `/settings`: Update contact info, change password, delete account.
+
+#### 3. **Wallet**
+- `/wallet`: Show balance (toggle visibility), fund wallet with modal options (Bank, USSD, Card - simulate), and view history.
+
+#### 4. **Transactions**
+- `/transactions`: Filterable transaction table (Success/Failed), export to CSV/PDF buttons.
+
+#### 5. **Services Pages**
+- `/airtime-data`: Buy airtime or data with Telco selector, amount input, and phone number.
+- `/utilities`: Pay electricity or Cable TV. Disco/provider selector, meter/account number input, plan/bouquet list.
+- `/education`: Buy WAEC/NECO/JAMB pins – select body and pin type.
+- `/betting`: Fund betting wallet with age restriction prompt.
+- `/software`: Grid layout of license keys (antivirus, productivity, VPNs), product detail modal, mock “Buy” button.
+
+#### 6. **Microsoft Tool**
+- `/ms-activation`: Installation ID fields (A-H), auto-tab on input, upload screenshot button, “Generate Confirmation ID” button, with a dummy response.
+
+#### 7. **Referral**
+- `/refer`: Show user’s referral code and copy button, display of earned rewards.
+
+#### 8. **Subscription Reminders**
+- `/notifications`: Toggle email notifications for reminders.
+
+#### 9. **Agent Pages**
+- `/agent/dashboard`: Commission summary, transaction volume.
+- `/agent/override`: “Act on behalf” toggle, customer phone input.
+- `/agent/withdraw`: Bank account info, withdraw commission UI with ₦5000 min and 2FA input field.
+
+#### 10. **Admin Panel (Frontend View Only)**
+- `/admin`: Cards for total revenue, transactions, users. Transaction table.
+- `/admin/users`: List of users, status badge, suspend/reset buttons (no actual functionality).
+- `/admin/analytics`: Charts showing sales, platform growth.
+
+---
+
+### 📈 Non-Functional Requirements (UI Only)
+- Loading skeletons for API calls.
+- Retry toast for failed simulated API call.
+- Handle errors gracefully with user-friendly modals or toasts.
+- Ensure full keyboard navigation and screen-reader compatibility.
+
+---
+
+### 🧪 Testing & Quality
+- Use React Testing Library for basic unit tests on forms and components (optional).
+- Ensure responsiveness using dev tools (iPhone, iPad, laptop breakpoints).
+- Ensure WCAG AA accessibility compliance for colors and fonts.
+
+---
+
+### 🗂 Folder Structure (React)
+src/
+│
+├── components/
+│ ├── common/ # Header, Footer, Layouts, Toasts
+│ ├── auth/ # Login, Register, 2FA
+│ ├── dashboard/ # User dashboard components
+│ ├── services/ # Airtime, Utilities, etc.
+│ ├── admin/ # Admin-specific UI
+│ └── agent/ # Agent-specific UI
+│
+├── pages/
+│ ├── Dashboard.jsx
+│ ├── Wallet.jsx
+│ ├── Transactions.jsx
+│ └── ...
+│
+├── assets/ # Images, icons, logos
+├── context/ # Global context (e.g., auth, wallet)
+├── hooks/ # Custom hooks (e.g., useForm, useFetch)
+├── App.jsx
+└── main.jsx
+
+yaml
+Copy
+Edit
+
+---
+
+Please scaffold this project on Replit using the technologies above. Simulate backend responses wh
