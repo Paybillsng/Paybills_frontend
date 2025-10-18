@@ -8,7 +8,7 @@ import React, {
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
 
-const BASE_URL = "https://paybill-web.onrender.com";
+const BASE_URL = "http://127.0.0.1:8000/api";
 interface User {
   id: string;
   email: string;
@@ -54,7 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         // The refresh token is in an HttpOnly cookie, so we just need to hit the refresh endpoint.
         // The browser will send the cookie automatically.
-        const response = await fetch(`${BASE_URL}/v1/auth/refresh/`, {
+        const response = await fetch(`${BASE_URL}/v1/auth/token/refresh/`, {
           method: "POST",
           credentials: "include", // Important to send cookies
           headers: { "Content-Type": "application/json" },
